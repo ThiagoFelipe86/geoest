@@ -1,0 +1,475 @@
+
+
+<!doctype html>
+<html lang="pt" prefix="og: http://ogp.me/ns#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>5 Milhas Night Run 2023 | Mapa Interativo</title>
+  <link rel="canonical" href="https://mcmlocator.com/map">
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="5 Milhas Night Run é uma corrida temática que acontece todos os anos no mês de comemoração do Rock In Roll.">
+  
+  <link rel="preconnect" href="https://ctycms.com/">
+  <link rel="preconnect" href="https://img.ctykit.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   
+  <link rel="preload" as="font" href="https://ctycms.com/_fontawesome/use/webfonts/fa-solid-900.woff2" type="font/woff2" crossorigin> 
+  
+  
+  <link rel="stylesheet" href="https://ctycms.com/_bootstrap5/use/css/bootstrap.min.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/2.15.0/mapbox-gl.min.css">
+  <link rel="stylesheet" href="https://mcmlocator.com/_templates/_styles.css?v=2022"> 
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Unica+One&display=swap">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-414146-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-414146-6');
+</script>
+
+<style>
+		
+		a { color:#000; text-decoration:none; }
+		a:hover { color:#000; text-decoration:none; }
+
+        #mcm_control.theme-15 { background-color:#C0C0C0; }
+		.fa-rotate-left:before{content:"\f2ea"}	
+		.fa-flag-checkered:before{content:"\f11e"}	
+		.fa-sun-cloud:before{content:"\f763"}	
+		.fa-mountains:before{content:"\f6fd"}
+		.fa-cloud-sun-rain:before{content:"\f743"}	
+		.fa-guitar-electric:before{content:"\f8be"}	
+		
+			
+		
+		@media all and (max-width: 767px) {
+		#mcm_clima { position:absolute; z-index:5; bottom:45px; right:12px;}
+		.nav-mobile { display:block; }
+		.nav-desktop { display:none; }
+		
+		#mcm_elev { position:absolute; z-index:5; bottom:108px; right:12px;}
+		.nav-mobile { display:block; }
+		.nav-desktop { display:none; }
+		}
+		@media all and (min-width: 768px) {
+		#mcm_clima { position:absolute; z-index:5; bottom:65px; right:24px;}
+		#mcm_elev { position:absolute; z-index:5; bottom:130px; right:24px;}
+		}
+		
+		.mcm-clima-hold { background-color:rgba(255,255,255,0.9); border-radius:18px; position:relative; padding:30px; margin-left:12px; min-width:36px; min-height:36px; }
+		.mcm-elev-hold { background-color:rgba(255,255,255,0.9); border-radius:18px; position:relative; padding:30px; margin-left:12px; min-width:36px; min-height:36px; }
+		@media all and (min-width: 768px) {	
+		.mcm-clima-hold { margin-left:300px; }
+		.mcm-elev-hold { margin-left:300px; }
+		}
+		
+		.mcm-clima-toggle { width:32px; height:32px; position:absolute; font-size:16px; line-height:16px; bottom:16px; right:16px; cursor:pointer; }
+		.mcm-clima-text { width:auto; height:auto; display:none; font-size:12px; line-height:16px; color:#222; margin-right:24px; color:#222; }
+		.mcm-clima-text a { color:#222; text-decoration:none; font-weight:700; }
+		.mcm-clima-text a:hover { color:#E31B23; text-decoration:none; font-weight:700; }
+		
+		.mcm-elev-toggle { width:32px; height:32px; position:absolute; font-size:16px; line-height:16px; bottom:16px; right:16px; cursor:pointer; }
+		.mcm-elev-text { width:auto; height:auto; display:none; font-size:12px; line-height:16px; color:#222; margin-right:24px; color:#222; }
+		.mcm-elev-text a { color:#222; text-decoration:none; font-weight:700; }
+		.mcm-elev-text a:hover { color:#E31B23; text-decoration:none; font-weight:700; }
+		
+		
+		.nav-geoest { color:#000; font-weight:700; font-size:15px; line-height:19px; letter-spacing:1.1; margin-top:20px; }
+		.nav-mob { color:#000; font-size:11px;  letter-spacing:1.1;  }
+		
+		.sm_hidden:hover { color:#000; }
+		
+
+    </style>
+    
+</head>
+<body>
+
+<main id="page-content">
+<div id="mcm_hold">
+	<div id="mcm_control" class="theme-15">
+		<div class="nav-mobile">
+			<div class="nav-logo"><img src="https://www.nightrock.com.br/img/logo.png" alt="5 Milhas Night Run 2023 | Mapa Interativo" width="176" height="16" /></div>
+			<div class="nav-toggle"><i class="fas fa-bars"></i></div>
+			
+			<div style="clear:both"></div>
+		</div>
+		<div class="nav-desktop">
+						<div class="nav-logo"><img src="https://www.nightrock.com.br/img/logo.png" alt="5 Milhas Night Run 2023 | Mapa Interativo" width="176" height="128" /></div>
+			<div class="nav-dateline">5 MILHAS NIGHT RUN<br />15 de Julho de 2023 18h</div>
+	  </div>
+		<div id="nav-drawer">
+			<div class="nav-drawer-intro">Selecione para visualização</div>
+			<div class="nav-drawer-items">
+						<div id="tag-1" class="sm_layer sm_visible" data-id=1><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">MARCADORES KM</div></div>
+						<div id="tag-2" class="sm_layer sm_visible" data-id=2><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">HIDRATAÇÃO</div></div>
+			<div id="tag-3" class="sm_layer sm_visible" data-id=3><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">CHEGADA</div></div>
+			<div id="tag-4" class="sm_layer sm_visible" data-id=4><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">AMBULÂNCIA</div></div>
+			<div id="tag-5" class="sm_layer sm_visible" data-id=5><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">PONTOS DE RETORNO</div></div>
+			<div id="tag-6" class="sm_layer sm_visible" data-id=6><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">LOCAL DA BANDA</div></div>
+			<!-- <div id="tag-22" class="sm_layer sm_hidden" data-id=22><div class="sm_layer_icon_on"><i class="fas fa-check-circle"></i></div><div class="sm_layer_icon_off"><i class="fas fa-circle-notch"></i></div><div class="sm_layer_label">TURISMO</div></div>-->
+			</div>
+            <div align="center" class="nav-geoest"><a href="https://wa.me/5583981422371" target="_blank">&copy; GeoEst</a></div>
+            <div align="center" class="nav-mob"><a href="https://wa.me/5583981422371">Mobilidade Urbana</a></div>
+		</div>
+	</div>
+	<div id="mcm_map"></div>
+	<div id="mcm_copy">
+		<div class="mcm-copyright-hold">
+			<div class="mcm-copyright-text">Mapa por <a href="https://wa.me/5583981422371" target="_blank">&copy; GeoEst</a>. &copy;&nbsp;<a href="https://geocentric.com" rel="noopener" target="_blank">Geocentric</a> &copy;&nbsp;<a href="https://www.mapbox.com/about/maps/" rel="noopener" target="_blank">Mapbox</a> &copy;&nbsp;<a href="http://www.openstreetmap.org/about/" rel="noopener" target="_blank">OpenStreetMap</a> </div>
+			<div class="mcm-copyright-toggle"><i class="fas fa-info-circle"></i></div>
+		</div>
+	</div>
+    
+    <!-- ELEVAÇÃO -->
+  
+  	<div id="mcm_elev">
+		<div class="mcm-elev-hold">
+			<div class="mcm-elev-text"><div><img src="https://static.wixstatic.com/media/3176ad_7b9579b830fd423ab699fa56f470bfa6~mv2.png" width="503" height="240"></div> </div>
+			<div class="mcm-elev-toggle"><i class="fas fa-mountains fa-2x"></i></div>
+		</div>
+	</div>
+    
+    <!-- CLIMA -->
+    
+       
+  
+  	<div id="mcm_clima">
+		<div class="mcm-clima-hold">
+        	 
+			<div class="mcm-clima-text"><div><img src="https://static.wixstatic.com/media/3176ad_d5ca823748f24b5e96bc6a6fed733923~mv2.png" width="309" height="324"></div> 
+        </div>
+			<div class="mcm-clima-toggle"><i class="fas fa-sun-cloud fa-2x"></i></div>
+		</div>
+	</div>
+  
+    
+</div>
+
+
+</main><!-- /#page-content -->
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.slim.min.js"></script>
+       
+<script>
+  window.addEventListener('DOMContentLoaded', function() {
+    var watchdata = {uid: '161122','w':document.documentElement.clientWidth,'h':document.documentElement.clientHeight,'mt':'35'};
+    fetch("/citywatch.php", { method: "POST", headers: {'Content-Type': 'application/json'}, body: JSON.stringify(watchdata) });
+  });
+</script>  
+<script>
+$(document).ready(function(){  
+  $('.nav-toggle').click(function(e){
+	  $('#nav-drawer').slideToggle();
+  });
+  $('.mcm-copyright-toggle').click(function(e){
+	  $('.mcm-copyright-text').toggle();
+  });
+}); 
+</script>
+
+<script>
+$(document).ready(function(){  
+  $('.nav-toggle').click(function(e){
+	  $('#nav-drawer').slideToggle();
+  });
+  $('.mcm-elev-toggle').click(function(e){
+	  $('.mcm-elev-text').toggle();
+  });
+}); 
+</script>
+
+<script>
+$(document).ready(function(){  
+  $('.nav-toggle').click(function(e){
+	  $('#nav-drawer').slideToggle();
+  });
+  $('.mcm-clima-toggle').click(function(e){
+	  $('.mcm-clima-text').toggle();
+  });
+}); 
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/2.15.0/mapbox-gl.js"></script>
+<script>
+if ('IntersectionObserver' in window) {	
+	var observer = new IntersectionObserver(function(entries) {
+		if(entries[0]['isIntersecting'] === true) {
+			loadMapbox();
+			observer.disconnect(); 
+		}
+	}, { threshold: [0] });
+	observer.observe(document.querySelector("#mcm_map"));
+} 
+
+function loadMapbox() {
+    
+mapboxgl.accessToken = 'pk.eyJ1IjoidGhpYWdvZmVsaXBlODYiLCJhIjoiY2t0eXFjM2l2MzVvcjJ2bzJxOXp5cDJnbiJ9.dKE2NqOuqDGpB7ZPB0CUQQ';
+
+var mapgl = new mapboxgl.Map({
+  container: 'mcm_map',
+	center: [-34.80333,-7.1600],
+	zoom: 13.8,
+	style: 'mapbox://styles/thiagofelipe86/clk2tqc8g01l101qjaz9a9kpo',
+  	/*style: 'mapbox://styles/thiagofelipe86/clhffn0kk00nt01qh970k2ve0',*/
+	minZoom: 10,
+	maxZoom: 16,
+/*	pitch: 20,
+	bearing:-36,*/
+	attributionControl: false,
+	scrollZoom: true
+});
+/*mapgl.addControl(new mapboxgl.FullscreenControl());*/
+mapgl.addControl(new mapboxgl.NavigationControl());
+/*mapgl.addControl(new mapboxgl.GeolocateControl({ positionOptions: { enableHighAccuracy: true }, trackUserLocation: true }));*/
+
+var citylayer24 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.067997,38.889129]},properties:{pclass:'pclass-24',pid:'145',pname:'MCM Finish',pmile:'F'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.062107,38.881721]},properties:{pclass:'pclass-24',pid:'1',pname:'MCM Start',pmile:'S'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.07067947631779,38.873360373756526]},properties:{pclass:'pclass-24',pid:'1',pname:'MCM Start',pmile:'T'}}
+
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places24", { "type": "geojson", "data": citylayer24}); });
+
+
+
+
+
+citylayer24.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-24 category-24';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-num\">" + marker.properties.pmile + "</div></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+var citylayer1 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.799780045975496,
+          -7.150592226215863]},properties:{pclass:'pclass-1',pid:'2',pname:'1km',pmile:'1'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.79575434432411,
+          -7.1527409517159555]},properties:{pclass:'pclass-1',pid:'3',pname:'2km',pmile:'2'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80068450730897,
+          -7.162788490028831]},properties:{pclass:'pclass-1',pid:'4',pname:'3km',pmile:'3'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80083055132977,
+          -7.172856009524423]},properties:{pclass:'pclass-1',pid:'5',pname:'4km',pmile:'4'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.8000904213163,
+          -7.164416191534983]},properties:{pclass:'pclass-1',pid:'6',pname:'5km',pmile:'5'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.79720263517726,
+          -7.1572559865413155]},properties:{pclass:'pclass-1',pid:'7',pname:'6km',pmile:'6'}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.79837130884266,
+          -7.150181479079393]},properties:{pclass:'pclass-1',pid:'8',pname:'7km',pmile:'7'}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places1", { "type": "geojson", "data": citylayer1}); });
+
+citylayer1.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-1 category-1';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" id=\"circle\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 15 15\" xml:space=\"preserve\"><path d=\"M14,7.5c0,3.5899-2.9101,6.5-6.5,6.5S1,11.0899,1,7.5S3.9101,1,7.5,1S14,3.9101,14,7.5z\"/></svg></div><div class=\"smarker-num\">" + marker.properties.pmile + "</div></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+/*$('.category-1').hide();*/
+
+var citylayer2 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80065468234719,
+          -7.157700368178922]},properties:{pclass:'pclass-2',pid:'47',pname:'Ponto de Hidratação (2,5km)',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80035961516546,-7.163599585795765]},properties:{pclass:'pclass-2',pid:'48',pname:'Ponto de Hidratação (4km)',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places2", { "type": "geojson", "data": citylayer2}); });
+
+citylayer2.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-2 category-2';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-tint\'></i></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+
+/*$('.category-2').hide();*/
+
+var citylayer4 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.79806457820155,
+          -7.148301452751667]},properties:{pclass:'pclass-1',pid:'47',pname:'Ponto Base da Ambulância',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places4", { "type": "geojson", "data": citylayer4}); });
+
+citylayer4.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-1 category-4';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-plus\'></i></div>";
+	
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+//$('.category-4').hide();
+
+var citylayer3 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.798925598528456,
+          -7.147913632578195]},properties:{pclass:'pclass-6',pid:'39',pname:'Local de Largada e Chegada',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places3", { "type": "geojson", "data": citylayer3}); });
+
+citylayer3.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-6 category-3';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-flag-checkered\'></i></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+/*$('.category-3').hide();*/
+
+
+var citylayer5 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.800328180438555,
+          -7.15815621249277]},properties:{pclass:'pclass-5',pid:'52',pname:'Retorno - Modalidade 5km (2,5km)',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80110769700062,
+          -7.171755350105144]},properties:{pclass:'pclass-5',pid:'53',pname:'Retorno - Modalidade 8km (4km)',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places5", { "type": "geojson", "data": citylayer5}); });
+
+citylayer5.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-5 category-5';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-rotate-left\'></i></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+/*$('.category-5').hide();*/
+
+var citylayer6 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-34.80078173427992,
+          -7.1587187640508745]},properties:{pclass:'pclass-4',pid:'55',pname:'Local da Banda (2,5km)',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places6", { "type": "geojson", "data": citylayer6}); });
+
+citylayer6.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-4 category-6';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-guitar-electric\'></i></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+/*$('.category-6').hide();*/
+
+/*var citylayer22 = { type: 'FeatureCollection', features: [
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.062805,38.904944]},properties:{pclass:'pclass-22',pid:'129',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.050424,38.90997]},properties:{pclass:'pclass-22',pid:'130',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.056496,38.897245]},properties:{pclass:'pclass-22',pid:'131',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.030597,38.871423]},properties:{pclass:'pclass-22',pid:'132',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.040339,38.880143]},properties:{pclass:'pclass-22',pid:'133',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.022655,38.858333]},properties:{pclass:'pclass-22',pid:'134',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.036111,38.877019]},properties:{pclass:'pclass-22',pid:'135',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.03197,38.890365]},properties:{pclass:'pclass-22',pid:'136',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.031713,38.890365]},properties:{pclass:'pclass-22',pid:'137',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.012572,38.890114]},properties:{pclass:'pclass-22',pid:'138',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.013624,38.888644]},properties:{pclass:'pclass-22',pid:'139',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.064371,38.885079]},properties:{pclass:'pclass-22',pid:'140',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.065884,38.887567]},properties:{pclass:'pclass-22',pid:'141',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.067761,38.888394]},properties:{pclass:'pclass-22',pid:'142',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.068062,38.889129]},properties:{pclass:'pclass-22',pid:'143',pname:'MarathonFoto',pmile:''}},
+{type: 'Feature',geometry:{type:'Point',coordinates:[-77.069778,38.890432]},properties:{pclass:'pclass-22',pid:'144',pname:'MarathonFoto',pmile:''}}
+]};
+mapgl.on('load', function (e) { mapgl.addSource("places22", { "type": "geojson", "data": citylayer22}); });
+
+citylayer22.features.forEach(function(marker, i) {
+	var el = document.createElement('div');
+	el.id = "marker-" + marker.properties.pid;
+	el.className = 'smarker fill-color-22 category-22';
+	el.innerHTML="<div class=\"smarker-bg\"><svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 24 36\" style=\"enable-background:new 0 0 24 36;\" xml:space=\"preserve\"><path class=\"st0\" d=\"M23,16L23,16c0.6-1.4,1-2.9,1-4.6C24,5.1,18.6,0,12,0C5.4,0,0,5.1,0,11.5c0,1.6,0.4,3.2,1,4.6l0,0L1,16.1c0.2,0.4,0.5,0.9,0.7,1.3L12,36l10.2-18.6C22.5,17,22.8,16.5,23,16L23,16z\"/></svg></div><div class=\"smarker-i\"><i class=\'fas fa-camera-alt\'></i></div>";
+	new mapboxgl.Marker(el, {offset: [0,-18]}).setLngLat(marker.geometry.coordinates).addTo(mapgl);
+		el.addEventListener('click', function(e){
+		flyToMarker(marker);
+		createPopUp(marker);
+	});
+});
+
+
+$('.category-22').hide();*/
+
+	$('.sm_layer').click(function(e){			
+		var uid = $(this).data('id');
+		var thiscategory=".category-"+uid;
+		if ($(this).hasClass('sm_visible')) {
+			clearPopUp();
+			$(thiscategory).hide();
+			$(this).removeClass("sm_visible").addClass("sm_hidden");
+		} else {
+			$(thiscategory).show();
+			$(this).removeClass("sm_hidden").addClass("sm_visible");
+		}
+	});
+
+	function flyToMarker(currentFeature) {
+    var thisZoom = mapgl.getZoom();
+    if (thisZoom<14) { thisZoom=15; }
+	  mapgl.flyTo({
+	    center: currentFeature.geometry.coordinates,
+	    zoom: thisZoom,
+		  speed: 0.65, 
+	  });
+	}
+
+	function createPopUp(currentFeature) {
+		clearPopUp();
+	  var popup = new mapboxgl.Popup({closeOnClick: false, focusAfterOpen: false, anchor:'bottom', className:currentFeature.properties.pclass})
+	    .setLngLat(currentFeature.geometry.coordinates)
+	    .setHTML('<h3>' + currentFeature.properties.pname + '</h3>')
+	    .addTo(mapgl);
+	}
+
+	function clearPopUp() {
+	    var popUps = document.getElementsByClassName('mapboxgl-popup');
+	    if (popUps[0]) popUps[0].remove();
+	}
+  
+} // end loadMapbox  
+
+</script>	
+
+</body>
+</html>
